@@ -1,26 +1,14 @@
 package prueba;
 
+import java.util.Arrays;
+
 public class Ej {
  
     public static void main(String[] args) {
  
-        int num[]=rellenarArrayDesde(5);
-        
-        imprimirArray(num);
-    }
- 
-    public static void imprimirArray (int lista[]){
-        for(int i=0;i<lista.length;i++){
-            System.out.println(lista[i]);
-        }
-    }
- 
-    public static int[] rellenarArrayDesde(int a){
-        int num[]=new int [10];
-        for(int i=0;i<num.length;i++){
-            num[i]=a;
-            a++;
-        }
-        return num;
+
+    	int[] x = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      	Arrays.sort(x);
+    	System.out.println(Arrays.binarySearch(x, x.length-1)); 
     }
 }
