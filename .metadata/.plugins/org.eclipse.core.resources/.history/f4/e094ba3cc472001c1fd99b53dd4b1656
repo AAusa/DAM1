@@ -1,0 +1,34 @@
+package ClasesObjetos;
+
+import java.util.Scanner;
+/**
+ * 
+ * Si m>=n
+	contador (int i=n; i>0; i--)
+		m * i
+	fin contador
+Fin si
+ *
+ */
+public class Ej8 {	
+		
+	public static void main (String[]args) {
+		int m = 0;
+		int n = 0;
+		int resultado = 0;
+		
+		System.out.println("Introduzca n: ");
+		Scanner teclado = new Scanner(System.in);
+		n = teclado.nextInt();
+		System.out.println("Introduzca m: ");
+		m = teclado.nextInt();
+	
+		if(m>=n) {
+			for(int i=n; i>0; i--) {
+				System.out.println(m+" * "+i);
+			}
+		System.out.println("Hay "+n+" combinaciones de "+m+" sobre "+n);
+		
+		}
+	}
+}

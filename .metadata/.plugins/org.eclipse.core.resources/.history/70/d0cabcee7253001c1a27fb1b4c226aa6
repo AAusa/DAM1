@@ -1,0 +1,63 @@
+package examen;
+import java.util.Scanner;
+public class Correccion1 {
+	public static void main(String[] args) {
+		
+		/**
+		 * Toma de datos: fecha inical y final
+		 * Contador_dias = 0
+		 * Mientras (fecha inicial > fecha final)
+		 *		contador++
+		 *		fecha inicial++
+		 *		Si es el último día del año
+		 *			dia_inicial = 1
+		 *			mes_inicial = 1
+		 *			año_inicial += 1
+		 *		Sino, si es el último día del mes
+		 *			dia_inicial = 1
+		 *			mes_inicial += 1
+		 *		Sino
+		 *			dia_inicial += 1		
+		 */
+		
+		//VARIABLES:
+		int dIni=0;
+		int mIni=0;
+		int aIni=0;
+		
+		int dFin=0;
+		int mFin=0;
+		int aFin=0;
+		
+		int dia=0;
+		int mes=0;
+		int año=0;
+		
+		int contadorDias=0;
+		
+		Scanner teclado = new Scanner(System.in);
+		//FECHA INICIAL:
+		System.out.println("Introduzca el día inicial:");
+		dIni=teclado.nextInt();
+		System.out.println("Introduzca el mes inicial:");
+		mIni=teclado.nextInt();
+		System.out.println("Introduzca el año inicial:");
+		aIni=teclado.nextInt();
+		
+		//FECHA FINAL:
+		System.out.println("Introduzca el día inicial:");
+		dFin=teclado.nextInt();
+		System.out.println("Introduzca el mes inicial:");
+		mFin=teclado.nextInt();
+		System.out.println("Introduzca el año inicial:");
+		aFin=teclado.nextInt();
+		
+		dia=dIni;
+		mes=mIni;
+		año=aIni;
+		
+		
+	
+
+	}
+}

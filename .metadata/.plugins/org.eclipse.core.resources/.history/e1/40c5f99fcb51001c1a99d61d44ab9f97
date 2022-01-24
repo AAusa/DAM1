@@ -1,0 +1,99 @@
+package examen;
+import java.util.Scanner;
+public class Correccion1 {
+	public static void main(String[] args) {
+		String correo="";
+		char caracter=0;
+		int longitud=0;
+		
+		boolean fin_pl = false;
+		boolean fin_dom = false;
+		boolean b_pl_correcto=false;
+		boolean b_dom_correcto=false;
+		boolean b_total_correcto=false;
+		
+		int pl_correcta=0;
+		int pl_incorrecta=0;
+		int dom_correcta=0;
+		int dom_incorrecta=0;
+		
+
+		int i=0;
+		int j=0;
+		
+		
+		
+		Scanner teclado=new Scanner(System.in);
+		System.out.println("Correo: ");
+		correo= teclado.nextLine();
+		longitud=correo.length();
+		
+		for(i=0;i<longitud && fin_pl==false;i++) {
+			
+			//VALIDACIÓN PARTE LOCAL
+			caracter=correo.charAt(i);
+			if(caracter>='A' && caracter<='Z' || caracter>='a' && caracter<='z' || caracter>='0' && caracter<='9' || caracter=='-' || caracter=='_' || caracter=='.') {
+				pl_correcta++;
+			}
+			else {
+				pl_incorrecta++;
+			}
+	
+			//FIN DE PARTE LOCAL
+			if(caracter=='@') {
+				fin_pl = true;
+			}
+			else {
+				fin_pl = false;
+			}
+		}
+		if(pl_incorrecta==1 && pl_correcta<65){
+			System.out.println("Parte local correcta");
+			b_pl_correcto=true;
+		}
+		else {
+			System.out.println("Parte local incorrecta");
+		}
+		
+		
+		for(j=i;j<longitud && fin_dom==false;j++) {
+			
+			//VALIDACIÓN PARTE DOMINIO
+			caracter=correo.charAt(j);
+			if(caracter>='A' && caracter<='Z' || caracter>='a' && caracter<='z' || caracter>='0' && caracter<='9' || caracter=='-'|| caracter=='.') {
+				if(caracter=='.') {
+					dom_correcta++;
+					
+				}
+				else {
+					dom_correcta++;
+				}
+			}
+			else {
+				dom_incorrecta++;
+			}
+	
+			//FIN DE DOMINIO
+			if(caracter==0) {
+				fin_dom = true;
+			}
+			else {
+				fin_dom = false;
+			}
+		}
+		if(dom_incorrecta==1 && dom_correcta<65){
+			System.out.println("Parte dominio correcta");
+			b_dom_correcto=true;
+		}
+		else {
+			System.out.println("Parte dominio incorrecta");
+		}
+		
+		if(b_pl_correcto == true && b_dom_correcto==true) {
+			System.out.println("Correo correcto");
+		}
+		else {
+			System.out.println("Correo incorrecto");	
+		}
+	}
+}

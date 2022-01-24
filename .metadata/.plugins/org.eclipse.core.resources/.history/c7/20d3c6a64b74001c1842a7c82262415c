@@ -1,0 +1,48 @@
+package prueba;
+
+public class EjClase {
+	private int patas;
+	private String color;
+	private int ancho;
+	private int largo;
+	private int alto;
+	public int getPatas() {
+		return patas;
+	}
+	public void setPatas(int patas) {
+		this.patas = patas;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public int getAncho() {
+		return ancho;
+	}
+	public void setAncho(int ancho) {
+		this.ancho = ancho;
+	}
+	public int getLargo() {
+		return largo;
+	}
+	public void setLargo(int largo) {
+		this.largo = largo;
+	}
+	public int getAlto() {
+		return alto;
+	}
+	public void setAlto(int alto) {
+		this.alto = alto;
+	}
+	
+	public void setEleva(int numero) {
+		alto += numero;
+	}
+	public void setAlto(int alto2) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

@@ -1,0 +1,27 @@
+package ClasesObjetos2.Ej3;
+
+/**
+ * @author Álvaro
+ *
+ */
+public class TrabajadorMain {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Trabajador trabajador1 = new Trabajador ("Álvaro", 'S', 'D', 2, 2);
+		trabajador1.nomina('S', 'D', 2, 2);
+		System.out.println(trabajador1.verDatos());
+		
+		trabajador1.setNombre("Juan");
+		trabajador1.setEstadoCivil('C');
+		trabajador1.setTurno('N');
+		trabajador1.setTitulacion(1);
+		trabajador1.setAntiguedad(5);
+		Trabajador trabajador2 = new Trabajador ("Álvaro", 'S', 'D', 2, 2);
+		trabajador2.nomina('C', 'N', 1, 5);
+		System.out.println(trabajador1.verDatos());
+		System.out.println(trabajador2.verDatos());
+	}
+}

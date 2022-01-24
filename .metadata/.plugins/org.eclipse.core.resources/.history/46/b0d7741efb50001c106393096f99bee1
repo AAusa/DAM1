@@ -1,0 +1,19 @@
+package examen;
+import java.util.Scanner;
+public class Correccion1 {
+	public static void main(String[] args) {
+		String correo="";
+		int longitud=0;
+		char caracter=0;
+		
+		Scanner teclado=new Scanner(System.in);
+		System.out.println("correo");
+		correo=teclado.nextLine();
+		longitud=correo.length();
+		for(int i=0;i<=longitud;i++)		
+		caracter=correo.charAt(i);
+		
+		if()
+
+	}
+}

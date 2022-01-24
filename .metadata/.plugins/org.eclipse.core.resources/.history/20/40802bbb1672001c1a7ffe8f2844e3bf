@@ -1,0 +1,23 @@
+package prueba;
+
+import java.util.Scanner;
+
+class ClaseDemo {
+	// Constructor sin parámetros
+	ClaseDemo ( ) {
+	System.out.println("Constructor sin parámetros");
+	}
+	// Constructor con parámetro
+	ClaseDemo ( int val1 ) {
+	// invoca al constructor por defecto
+	this();
+	System.out.println("Constructor con 1 argumento: " + val1);
+	}
+	// Constructor con parámetros
+	ClaseDemo ( int val1, int val2 ) {
+	// invoca al constructor con un argumento
+	this(5);
+	System.out.print("Constructor con 2 argumentos: ");
+	System.out.println(val1 + " y " + val2);
+	}
+}

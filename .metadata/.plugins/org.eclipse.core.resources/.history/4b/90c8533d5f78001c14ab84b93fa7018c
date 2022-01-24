@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package prueba;
+
+/**
+ * @author Álvaro
+ *
+ */
+public class EjVectorMain {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

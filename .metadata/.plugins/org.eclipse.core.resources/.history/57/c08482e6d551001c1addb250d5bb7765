@@ -1,0 +1,28 @@
+package examen;
+import java.util.Scanner;
+public class Correccion1 {
+	public static void main(String[] args) {
+		int j=0;
+		int num=0;
+		int i=0;
+		int e=0;
+		int c=0;
+		
+		Scanner teclado=new Scanner(System.in);
+		System.out.println("Num:");
+		num=teclado.nextInt();
+		
+		for(i=1;i<=num;i++) {
+			e=num-i;
+			for(c=1;c<=e;c++) {
+				System.out.print(" ");
+			}
+			j=1;	
+			for(j=1;j<=i;j++) {
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+
+	}
+}

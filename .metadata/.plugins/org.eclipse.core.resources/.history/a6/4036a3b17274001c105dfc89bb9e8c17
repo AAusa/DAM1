@@ -1,0 +1,138 @@
+package ClasesObjetos2.Ej3;
+
+/**
+ * @author Álvaro
+ * @params nId, nombre, estadoCivil, turno, titulacion, antiguedad, nómina
+ */
+public class Trabajador {
+	static private int nId;
+	static private int contador;
+	private String nombre;
+	private char estadoCivil;
+	private char turno;
+	private int titulacion;
+	private int antiguedad;
+	private int nomina;
+	
+	public int getnId() {
+		return nId;
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public char getEstadoCivil() {
+		return estadoCivil;
+	}
+	public void setEstadoCivil(char estadoCivil) {
+		this.estadoCivil = estadoCivil;
+	}
+	public char getTurno() {
+		return turno;
+	}
+	public void setTurno(char turno) {
+		this.turno = turno;
+	}
+	public int getTitulacion() {
+		return titulacion;
+	}
+	public void setTitulacion(int titulacion) {
+		this.titulacion = titulacion;
+	}
+	public int getAntiguedad() {
+		return antiguedad;
+	}
+	public void setAntiguedad(int antiguedad) {
+		this.antiguedad = antiguedad;
+	}
+	
+	public int nomina(char estadoCivil, char turno, int titulacion, int antiguedad) {
+		if((estadoCivil == 'C' || estadoCivil == 'S') && (turno == 'N' || turno == 'D') && (titulacion == 0 || titulacion == 1 || titulacion == 2 || titulacion == 3|| titulacion == 4)) {
+			nomina = 425;
+			if(turno == 'N') {
+				turno += 100;
+			}
+			nomina += 75 * antiguedad;
+			switch(titulacion) {
+			case 0:
+				nomina += 250; break;
+			case 1:
+				nomina += 500; break;
+			case 2:
+				nomina += 1000; break;
+			case 3:
+				nomina += 1250; break;
+			case 5:
+				nomina += 250; break;
+			}
+			
+			if(estadoCivil == 'C') {
+				nomina -= nomina * 0.10;
+			}
+			else {
+				if(estadoCivil == 'S') {
+					nomina -= nomina * 0.12;
+				}
+			}
+		}
+			else {
+				nomina = 0;
+			}
+		return nomina;
+		}
+		
+	public String verDatos() {
+		String mensaje="";
+		if(nomina != 0) {
+			// Creación mensaje completo en estado civil y turno:
+			String mensajeEstadoCivil="";
+			if(estadoCivil == 'C') {
+				mensajeEstadoCivil = "casado";
+			}
+			else {	
+				if(estadoCivil == 'S') {
+					mensajeEstadoCivil = "soltero";
+				}
+			}
+			
+			String mensajeTurno="";
+			if(turno == 'D') {
+				mensajeTurno = "día";
+			}
+			else {	
+				if(turno == 'N') {
+					mensajeTurno = "noche";
+				}
+			}
+			mensaje = "El numId es "+nId+", el nombre es "+nombre+", el estado civil es "+mensajeEstadoCivil+", el turno es "+mensajeTurno+", la titulación es "+titulacion+", la antiguedad son "+antiguedad+ " años. La nómina son "+nomina+" €";
+		}
+		else {
+			System.out.println("Hay mínimo un parámetro ERRÓNEO");
+		}
+
+
+		return mensaje;
+	}
+	
+	public Trabajador() {
+		this.nombre = "";
+		this.estadoCivil = 0;
+		this.turno = 0;
+		this.titulacion = 0;
+		this.antiguedad = 0;
+	}
+	public Trabajador(String nombre, char estadoCivil, char turno, int titulacion, int antiguedad) {
+		int contador=0;
+		nId = ++contador;
+		
+		this.nId = nId;
+		this.nombre = nombre;
+		this.estadoCivil = estadoCivil;
+		this.turno = turno;
+		this.titulacion = titulacion;
+		this.antiguedad = antiguedad;
+	}
+}

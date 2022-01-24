@@ -1,0 +1,86 @@
+package examen;
+import java.util.Scanner;
+public class Correccion1 {
+	public static void main(String[] args) {
+		
+		
+
+		
+		int d=0;
+		int m=0;
+		int a=0;
+		
+		int d_hoy=29;
+		int m_hoy=11;
+		int a_hoy=2021;
+		
+		boolean bisiesto=false;
+		int dias_mes=0;
+		int d_total=1;
+		
+		//FECHA NACIMIENTO:
+		Scanner teclado=new Scanner(System.in);
+		System.out.println("año");
+		a=teclado.nextInt();
+	
+		System.out.println("mes");
+		m=teclado.nextInt();
+		
+		System.out.println("dia");
+		d=teclado.nextInt();
+		
+		
+		for(d_total=1;d<=d_hoy && m<=m_hoy && a<=a_hoy;d_total++) {
+			
+			// AÑO BISIESTO:
+			if(a%4==0) {
+				bisiesto=true;
+			}
+			else {
+				bisiesto=false;
+			}
+			
+			//DÍAS MES:
+			if(m%2!=0 && m<=7 || m%2==0 && m>7) {
+				dias_mes=31;
+			}
+			else {
+				if(m==2){
+					if(bisiesto=true) {
+						dias_mes=29;
+					}
+					else{
+						dias_mes=28;
+					}
+				}
+				else {
+					dias_mes=30;
+				}
+			}
+		
+			
+			//INCREMENTO MES Y AÑO:
+			if(d==dias_mes) {
+				if(m==12) {
+					d=1;
+					m=1;
+					a+=1;	
+				}
+				else{
+					d+=1;
+					m+=1;
+					a=a;
+				}
+			}
+			else {	
+				d+=1;;	
+			}
+		}
+		System.out.println("Los dias transcurridos son: "+d_total);
+		
+		
+		
+		
+		
+	}
+}

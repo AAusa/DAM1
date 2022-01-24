@@ -1,0 +1,44 @@
+package Examen;
+
+import java.util.Scanner;
+
+public class Ej1 {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		
+		Scanner teclado = new Scanner(System.in);	
+		
+		System.out.println("selecciona que tipo de operacion deseas");
+		
+		System.out.println("1 es suma");
+		System.out.println("2 es diferencia");
+		System.out.println("3 es producto");
+		
+		int elegir;
+		elegir = teclado.nextInt();
+		
+		int valor1;
+		int valor2;
+		valor1 = (int) (Math.random()*19+1);
+		
+		
+		switch(elegir) {
+			case 1:{
+				
+			}
+			case 2:{
+				
+			}
+			case 3:{
+			}
+		}
+		
+
+	}
+
+}

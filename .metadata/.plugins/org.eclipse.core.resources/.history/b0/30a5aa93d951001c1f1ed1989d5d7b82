@@ -1,0 +1,41 @@
+>
+public class Correccion1 {
+	public static void main(String[] args) {
+		/**
+		 * EXPLICACIÓN: 
+		 * 1º For: regula lo que se va a realizar en cada línea
+		 * 2º For: imprime n espacios, siendo n, el numero introducido menos la linea en la que se encuentra el programa
+		 * 3º For: se escriben tantos * como líneas en la que se encuentra el programa
+		 * (4º For: por segunda ocasión, se escriben tantos * como líneas en la que se encuentra el programa
+		 */
+		int j=0;
+		int num=0;
+		int i=0;
+		int e=0;
+		int c=0;
+		int a=0;
+		Scanner teclado=new Scanner(System.in);
+		System.out.println("Num:");
+		num=teclado.nextInt();
+		if(num>0) {
+			System.out.println("N="+num);
+			for(i=1;i<=num;i++) {
+				e=num-i;
+				for(c=1;c<=e;c++) {
+					System.out.print(" ");
+				}
+				j=1;	
+				for(j=1;j<=i;j++) {
+					System.out.print("*");
+				}
+				/**for(a=1;a<=i;a++) {
+					System.out.print("*");
+				}*/
+				System.out.println("");
+			}
+		}
+		else {
+			System.out.println("Error");
+		}
+	}
+}

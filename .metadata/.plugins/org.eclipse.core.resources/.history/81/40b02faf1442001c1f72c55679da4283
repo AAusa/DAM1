@@ -1,0 +1,111 @@
+package entornos;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.FlowLayout;
+import java.awt.Color;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+
+public class Ej {
+
+	private JFrame frame;
+	private JLabel lblNewLabel;
+	private JPanel panel;
+	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ej window = new Ej();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Ej() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.LIGHT_GRAY);
+		frame.getContentPane().setLayout(null);
+		
+		lblNewLabel = new JLabel("DATOS DE DEPARTAMENTO");
+		lblNewLabel.setForeground(Color.BLUE);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 17));
+		lblNewLabel.setBackground(Color.LIGHT_GRAY);
+		lblNewLabel.setBounds(101, 28, 243, 31);
+		frame.getContentPane().add(lblNewLabel);
+		
+		panel = new JPanel();
+		panel.setBackground(new Color(255, 204, 102));
+		panel.setBounds(37, 71, 354, 144);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		lblNewLabel_1 = new JLabel("C\u00F3digo Departamento:");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel_1.setBounds(29, 44, 133, 14);
+		panel.add(lblNewLabel_1);
+		
+		lblNewLabel_2 = new JLabel("Nombre Departamento:");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel_2.setBounds(29, 69, 133, 14);
+		panel.add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("Localidad Departamento:");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel_3.setBounds(29, 94, 146, 14);
+		panel.add(lblNewLabel_3);
+		
+		textField = new JTextField();
+		textField.setBackground(new Color(255, 51, 153));
+		textField.setBounds(193, 41, 53, 20);
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(193, 66, 133, 20);
+		panel.add(textField_1);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(193, 91, 133, 20);
+		panel.add(textField_2);
+		
+		JButton btnNewButton = new JButton("Insertar Datos");
+		btnNewButton.setBounds(112, 227, 102, 23);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton btnLimpiarDatos = new JButton("Limpiar Datos");
+		btnLimpiarDatos.setBounds(242, 226, 102, 23);
+		frame.getContentPane().add(btnLimpiarDatos);
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

@@ -1,0 +1,59 @@
+package entornos;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.FlowLayout;
+import java.awt.Color;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import java.awt.Font;
+
+public class Ej {
+
+	private JFrame frame;
+	private JTextField txtLll;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ej window = new Ej();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Ej() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.LIGHT_GRAY);
+		frame.getContentPane().setLayout(null);
+		
+		txtLll = new JTextField();
+		txtLll.setFont(new Font("Tahoma", Font.BOLD, 17));
+		txtLll.setForeground(Color.BLUE);
+		txtLll.setBackground(Color.LIGHT_GRAY);
+		txtLll.setText(" DATOS DE DEPARTAMENTO");
+		txtLll.setBounds(87, 28, 270, 20);
+		frame.getContentPane().add(txtLll);
+		txtLll.setColumns(10);
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

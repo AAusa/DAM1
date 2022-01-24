@@ -1,0 +1,81 @@
+package cadenas;
+
+import java.util.Scanner;
+
+public class Ej10 {
+	public static void main(String[]args) {
+		String cadena;
+		int longitud;	
+		boolean v1;
+		boolean v2;
+		boolean v3;
+		boolean v4;
+		boolean v5;
+		boolean v6;
+		int c_h1=0;
+		int c_m1=0;
+		int c_h2=0;
+		int c_m2=0;
+		int correcto=0;
+		int incorrecto=0;
+		String terminar="00000000";
+		System.out.println("Introduzca la secuencia de 8 caracteres: ");
+		Scanner teclado = new Scanner(System.in);
+		cadena = teclado.nextLine();
+		longitud = cadena.length();
+		
+		if (longitud==8) {
+			
+			while(terminar.equals(cadena)!=true) {
+					v1=cadena.charAt(0) == '1';
+					v2=cadena.charAt(1) == '9';
+					v3=cadena.charAt(2) == '9';
+					v4=cadena.charAt(3) == '0' || cadena.charAt(3) == '1' || cadena.charAt(3) == '2' || cadena.charAt(3) == '3' || cadena.charAt(3) == '4' || cadena.charAt(3) == '5';
+					v5=cadena.charAt(4) == 'H' || cadena.charAt(4) == 'M'; 
+					v6=cadena.charAt(5) == '1' || cadena.charAt(5) == '2'; 	
+					
+					if(v1==true && v2==true && v3==true && v4==true && v5==true && v6==true) {
+						System.out.println("Bien introducido");
+						if(cadena.charAt(5) == '1') {
+							if(cadena.charAt(4) == 'H'){
+								c_h1+=1;
+							}
+							else {
+								c_m1+=1;
+							}
+						}
+						else {
+							if(cadena.charAt(4) == 'H'){
+								c_h2+=1;
+							}
+							else {
+								c_m2+=1;
+							}
+						}
+					correcto+=1;
+					}
+					
+					else {
+						System.out.println("Mal introducido");
+						incorrecto+=1;
+					}
+					System.out.println("Introduzca la secuencia de 8 caracteres: ");
+					cadena = teclado.nextLine();
+						
+			}
+			System.out.println("terminado");
+			System.out.println(correcto+" correctos");
+			System.out.println(incorrecto+" incorrectos");
+			System.out.println(c_h1+" chicos 1º");
+			System.out.println(c_m1+" chicas 1º");
+			System.out.println(c_m2+" chicas 1º");
+			System.out.println(c_h2+" chicos 2º");
+		}
+		else {
+			System.out.println("Mal introducido");
+		}
+			
+		}
+		
+	}
+
