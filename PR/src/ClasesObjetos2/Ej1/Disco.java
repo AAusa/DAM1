@@ -5,12 +5,21 @@ package ClasesObjetos2.Ej1;
  */
 public class Disco {
 	
+	public static int contador;
 	//Se crean atributos privados
 	private String titulo;
 	private int nCanciones;
 	private double precio;
 	private String fechaCompra;
+	private int numeroDiscos;
 	
+	public int getNumeroDiscos() {
+		return numeroDiscos;
+	}
+
+	public void setNumeroDiscos(int numeroDiscos) {
+		this.numeroDiscos = numeroDiscos;
+	}
 	// Se crean los get y set públicos para que se les pueda dar valor a los atributos de los objetos
 	public String getTitulo() {
 		return titulo;
@@ -38,12 +47,12 @@ public class Disco {
 	}
 	
 	// Se crea un constructor por defecto
-	public Disco() {
-		this.titulo="";
-		this.nCanciones=0;
-		this.precio=0;
-		this.fechaCompra="";
-	}
+//	public Disco() {
+//		this.titulo="";
+//		this.nCanciones=0;
+//		this.precio=0;
+//		this.fechaCompra="";
+//	}
 	
 	// Se crea un constructor con los parámetros que necesitamos
 	public Disco(String titulo, int nCanciones, int precio, String fechaCompra) {
@@ -51,6 +60,9 @@ public class Disco {
 		this.nCanciones=nCanciones;
 		this.precio=precio;
 		this.fechaCompra=fechaCompra;
+		this.numeroDiscos = ++contador;
 	}
+	
+	
 	
 }

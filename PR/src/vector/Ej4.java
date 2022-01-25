@@ -1,6 +1,3 @@
-/**
- * 
- */
 package vector;
 
 /**
@@ -40,7 +37,18 @@ public class Ej4 {
 			vector[i] = (int) (Math.random()*5+1);
 			vector2[i] = (int) (Math.random()*5+1);
 		}
+		System.out.print("Vector1: ");
+		for (int i = 0; i < vector.length; i++) {
+			System.out.print(vector[i]+" ");
+		} 
+		System.out.println();
+		System.out.print("Vector2: ");
+		for (int i = 0; i < vector.length; i++) {
+			System.out.print(vector2[i]+" ");
+		}
+		System.out.println();
 		
+		//CUANTAS VECES CADA ELEMENTO DE UNO EN EL OTRO:
 		for (int i = 0; i < vector.length; i++) {
 			cAparece = 0;
 			for (int j = 0; j < vector2.length; j++) {
@@ -50,6 +58,8 @@ public class Ej4 {
 			}
 			System.out.println("elemento "+i+": ("+vector[i]+"): "+cAparece+" veces");
 		}
+		
 	}
 
 }
+

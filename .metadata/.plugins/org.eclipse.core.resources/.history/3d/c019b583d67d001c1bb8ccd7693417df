@@ -1,0 +1,10 @@
+package ClasesObjetos2.Ej1;
+
+public class Coleccion {
+	
+	Disco[] discos=new Disco[100];
+	
+	discos[1].("a",8,9,"09/03/2002");
+	
+
+}
