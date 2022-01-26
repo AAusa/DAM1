@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 public class Coleccion {
-	Disco[] discos=new Disco[100];
+	Disco[] discos = new Disco[100];
 
 	private int indice;	
 	

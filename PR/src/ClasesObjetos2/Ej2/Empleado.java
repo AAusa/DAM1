@@ -14,6 +14,14 @@ public class Empleado {
 	//En este caso, se guarda en leerDatos lo que hacen los sets de cada uno
 	//				se guarda en verDatos lo que hacen los gets de cada uno
 	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}	
+	
 	public void leerDatos(String nombre, int numEmpleado) {
 		this.nombre = nombre;
 		this.numEmpleado = numEmpleado;
@@ -25,8 +33,9 @@ public class Empleado {
 	}
 	
 	// Se crea un constructor por defecto
-	public Empleado() {
-		this.nombre = "";
+	public Empleado(String nombre) {
+		this.nombre = nombre;
 		this.numEmpleado = 0;
 	}
+
 }

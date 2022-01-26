@@ -11,14 +11,12 @@ public class EmpleadoMain {
 	 * @param nombre, numEmpleado
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Empleado empleado1 = new Empleado();
-		
 		// Se obtiene nombre y numEmpleado y se inserta en el atributo del objeto:
+		/**
 		System.out.println("Introduzca nombre:");
 		Scanner teclado = new Scanner (System.in);
 		String nombre = teclado.nextLine();	
-		
+		Empleado empleado1 = new Empleado(nombre);
 		
 		System.out.println("Introduzca numEmpleado:");
 		int numEmpleado = teclado.nextInt();	
@@ -27,6 +25,10 @@ public class EmpleadoMain {
 		
 		//Se muestra el método toString:
 		System.out.println(empleado1.verDatos());
+		**/
+		Cincuenta grupoEmpleados1 = new Cincuenta();
+		grupoEmpleados1.cincuentaEmpleados();
+		grupoEmpleados1.lecturaEmpleados();
 	}
 
 }
