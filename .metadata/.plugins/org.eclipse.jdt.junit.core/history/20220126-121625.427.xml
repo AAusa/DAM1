@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculadoraTest" project="entornos" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="entornos.CalculadoraTest" time="0.019" displayname="CalculadoraTest" uniqueid="[engine:junit-jupiter]/[class:entornos.CalculadoraTest]">
-    <testcase name="testResta" classname="entornos.CalculadoraTest" time="0.016" displayname="testResta()" uniqueid="[engine:junit-jupiter]/[class:entornos.CalculadoraTest]/[method:testResta()]"/>
-    <testcase name="testSuma" classname="entornos.CalculadoraTest" time="0.0" displayname="testSuma()" uniqueid="[engine:junit-jupiter]/[class:entornos.CalculadoraTest]/[method:testSuma()]"/>
-    <testcase name="testMultiplicacion" classname="entornos.CalculadoraTest" time="0.0" displayname="testMultiplicacion()" uniqueid="[engine:junit-jupiter]/[class:entornos.CalculadoraTest]/[method:testMultiplicacion()]"/>
-    <testcase name="testDivision" classname="entornos.CalculadoraTest" time="0.001" displayname="testDivision()" uniqueid="[engine:junit-jupiter]/[class:entornos.CalculadoraTest]/[method:testDivision()]"/>
-  </testsuite>
-</testrun>
