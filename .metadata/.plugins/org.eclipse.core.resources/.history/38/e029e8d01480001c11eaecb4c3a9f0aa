@@ -118,10 +118,10 @@ public class CuentaCorriente {
 	return "";
 }
 	
-	public CuentaCorriente(String titular, String codigo) {
-		this.titular = titular;
+	public CuentaCorriente() {
+		this.titular = "";
 		this.saldo = 5;
-		this.codigo = codigo;
+		this.codigo = "";
 	}
 	public float getRetirar() {
 		return retirar;
