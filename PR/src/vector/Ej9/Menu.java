@@ -41,7 +41,7 @@ public class Menu {
 			precioTotal += vMenuPrecio[i];
 		}
 		for(int i = 0; i < indiceMenu*2; i++) {
-			System.out.println("Precio menu "+i+" "+vMenuPrecio[i]);
+			System.out.println("Precio plato "+i+" "+vMenuPrecio[i]);
 		}
 		System.out.println("El precio a pagar son: "+precioTotal);
 		System.out.println("Inserte pago:");

@@ -17,23 +17,40 @@ public class Cuentas {
 	
 	public void generarDatosCuenta() {
 		String codigo = "";
+		int titularN = 0;
 		String titular = "";
-		float saldo = 0;
+		int saldo = 0;
 		for(int i = 0; i < 100; i++) {
-			saldo = (int) (Math.random()*100+1);
-			cuentas[i].setSaldo(saldo);
+			titularN = (int)(Math.random()*5+1);	
+			switch(titularN) {
+			case 0:
+				titular = "Pepe"; break;
+			case 1:
+				titular = "Miguel"; break;
+			case 2:
+				titular = "Álvaro"; break;
+			case 3:
+				titular = "Jimena"; break;
+			case 4:
+				titular = "Mar"; break;
+			case 5:
+				titular = "Maria"; break;
+				}
+			saldo = (int)(Math.random()*100+1);	
+			saldos[i] = (int)(Math.random()*100+1);	
+			
 			for(int j = 0; j < 9; j++) {
-				cuentas[i].setCodigo(codigo);
-			}
-			cuentas[i].setTitular(titular);
+				codigo += (int) (Math.random()*9+1);
+			} 
+			
+			cuentas[i] = new CuentaCorriente(titular, codigo, saldo);
 			codigo = "";
 		}
-		Arrays.sort(saldos);
-		
+		Arrays.sort(saldos);		
 	}
 	
 	public void comparacionSaldos() {
-		
+
 		for(int i = 0; i < 100; i++) {
 			if(saldos[saldos.length-1] == cuentas[i].getSaldo()) {
 				System.out.println(cuentas[i].getTitular()+" "+cuentas[i].getCodigo()+" "+cuentas[i].getSaldo());

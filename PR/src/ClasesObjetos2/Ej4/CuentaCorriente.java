@@ -120,7 +120,7 @@ public class CuentaCorriente {
 	
 	public CuentaCorriente(String titular, String codigo, int saldo) {
 		this.titular = titular;
-		this.saldo = 5;
+		this.saldo = saldo;
 		this.codigo = codigo;
 	}
 	public float getRetirar() {
