@@ -25,6 +25,7 @@ public class CuentaCorrienteMain {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		/**
 		String codigo="";
 		int opcion=0;
 		float aIngresar=0;
@@ -55,7 +56,9 @@ public class CuentaCorrienteMain {
 			System.out.println(cuentaCorriente1.retiraDinero(aRetirar));break;	
 		default:
 			System.out.println("Opción incorrecta");
-		}
+			**/
+	Cuentas prueba = new Cuentas();
+	prueba.generarDatosCuenta();
+	prueba.comparacionSaldos();
 	}
 }
-

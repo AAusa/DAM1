@@ -1,10 +1,8 @@
 package entornos;
 
 public class DebugPruebaCodigo {
-
-	public static void main(String[] args) {
-		char[] cadena = new char[10];
-		char letra = 0;
+	char cadena[] = new char[10];
+	int contar_letra(char cadena[], char letra) {	
 		int contador, n, longitud;
 		n = 0;
 		contador = 0;
@@ -18,6 +16,6 @@ public class DebugPruebaCodigo {
 				longitud--;
 			} while (longitud > 0);
 		}
-		DebugPruebaCodigo prueba = new DebugPruebaCodigo();
+		return n;
 	}
 }

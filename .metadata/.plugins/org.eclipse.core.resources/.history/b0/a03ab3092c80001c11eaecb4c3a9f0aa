@@ -1,0 +1,19 @@
+package entornos;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class DebugPruebaCodigoTest {
+
+	@Test
+	void testContar_letra() {
+		char letra = 'c';
+		char cadena[] = {};
+		DebugPruebaCodigo prueba = new DebugPruebaCodigo();
+		int resultado = prueba.contar_letra(cadena, letra);
+		assertEquals(0, resultado);
+		
+	}
+
+}

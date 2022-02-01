@@ -1,0 +1,27 @@
+package entornos;
+
+public class DebugPruebaCodigo {
+	int contar_letra(char cadena[10], char letra) {	
+		int contador, n, longitud;
+		n = 0;
+		contador = 0;
+		longitud = cadena.length;
+		if (longitud > 0) {
+			do {
+				if (cadena[contador] == letra) {
+					n++;
+				}
+				contador++;
+				longitud--;
+			} while (longitud > 0);
+		}
+		return n;
+	}
+	public static void main(String[] args) {
+		char[] cadena = {'a','s','f','g','e','b','s','g','b','m'};
+		char letra = 'h';
+		
+		DebugPruebaCodigo prueba = new DebugPruebaCodigo();
+		prueba.contar_letra(, letra);
+	}
+}

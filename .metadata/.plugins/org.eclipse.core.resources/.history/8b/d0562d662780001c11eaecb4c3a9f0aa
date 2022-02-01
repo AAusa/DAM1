@@ -119,9 +119,9 @@ public class CuentaCorriente {
 }
 	
 	public CuentaCorriente() {
-		this.titular = "";
+		this.titular = titular;
 		this.saldo = 5;
-		this.codigo = "";
+		this.codigo = codigo;
 	}
 	public float getRetirar() {
 		return retirar;

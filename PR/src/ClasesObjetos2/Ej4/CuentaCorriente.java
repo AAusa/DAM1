@@ -118,7 +118,7 @@ public class CuentaCorriente {
 	return "";
 }
 	
-	public CuentaCorriente(String titular, String codigo) {
+	public CuentaCorriente(String titular, String codigo, int saldo) {
 		this.titular = titular;
 		this.saldo = 5;
 		this.codigo = codigo;
