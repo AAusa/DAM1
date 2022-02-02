@@ -26,6 +26,7 @@ class DebugPruebaCodigoTest {
 	
 	@Test
 	void testContar_letraDaUnNumMayorDe0() {
+		// 1,2,3,4,5,6,7
 		char letra = 'c';
 		char cadena[] = {'c', 'b', 'a', 'b', 'a', 'b', 'a', 'b', 'a', 'b'};
 		DebugPruebaCodigo prueba = new DebugPruebaCodigo();

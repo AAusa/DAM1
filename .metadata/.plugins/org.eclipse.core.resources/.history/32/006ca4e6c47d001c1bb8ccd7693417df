@@ -1,9 +1,0 @@
-package ClasesObjetos2.Ej1;
-
-public class Coleccion {
-
-	public static void main(String[] args) {
-		Discos[] discos=new Discos[100]("a", 8, 9, "09/03/2002");
-	}
-
-}

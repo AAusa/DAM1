@@ -46,62 +46,84 @@ public class TresEnRaya {
 	Scanner teclado = new Scanner(System.in);
 
 	public void juego() {
-		boolean seguir = true;
+		int seguir = 1;
+		boolean seguirJug = true;
 		int filaJug = 0, columnaJug = 0, jug1Gana = 0, jug2Gana = 0, empate = 0;
-		while (seguir) {
+		while (seguir == 1) {
 			//INICIALIZA TABLERO
 			for (int fila = 0; fila < tablero.length; fila++) {
 				for (int columna = 0; columna < tablero[fila].length; columna++) {
 					tablero[fila][columna] = " ";
 				}
 			}
+			seguirJug = true;
 			// JUEGO
-			for (int i = 0; i < 9; i++) {
+			for (int i = 0; i < 9 && seguirJug; i++) {
 				System.out.println("Fila:");
 				filaJug = teclado.nextInt();
 				System.out.println("Columna:");
 				columnaJug = teclado.nextInt();
-				if (i % 2 != 0) {
-					tablero[filaJug][columnaJug] = "O";
-				} else {
-					tablero[filaJug][columnaJug] = "X";
+				
+				//MUESTRA TABLERO
+				for (int fila = 0; fila < tablero.length; fila++) {
+					if (i % 2 != 0) {
+						tablero[filaJug][columnaJug] = "O";
+					} else {
+						tablero[filaJug][columnaJug] = "X";
+					}
+					for (int columna = 0; columna < tablero.length; columna++) {
+						System.out.print(tablero[fila][columna]);
+						if(columna == 2 && columna != 5) {
+							System.out.println();
+						}
+					}	
 				}
-			}
-			//MUESTRA TABLERO
-			for (int fila = 0; fila < tablero.length; fila++) {
-				for (int columna = 0; columna < tablero[fila].length; columna++) {
-					System.out.println(tablero[fila][columna]);
-				}
-			}
-			// QUIEN GANA
-			if ((tablero[0][0] == "O" && tablero[3][0] == "O" && tablero[6][0] == "O")
-					|| (tablero[1][1] == "O" && tablero[4][1] == "O" && tablero[7][1] == "O")
-					|| (tablero[2][2] == "O" && tablero[5][2] == "O" && tablero[8][2] == "O")
-					|| (tablero[0][0] == "O" && tablero[0][1] == "O" && tablero[0][2] == "O")
-					|| (tablero[1][3] == "O" && tablero[1][4] == "O" && tablero[1][5] == "O")
-					|| (tablero[6][2] == "O" && tablero[7][2] == "O" && tablero[8][2] == "O")
-					|| (tablero[0][0] == "O" && tablero[1][4] == "O" && tablero[2][8] == "O")
-					|| (tablero[2][0] == "O" && tablero[1][4] == "O" && tablero[0][2] == "O")) {
-				jug1Gana++;
-				System.out.println("jug1Gana");
+				// QUIEN GANA
+				if ((tablero[0][0] == "O" && tablero[1][0] == "O" && tablero[2][0] == "O")
+						|| (tablero[0][1] == "O" && tablero[1][1] == "O" && tablero[2][1] == "O")
+						|| (tablero[0][2] == "O" && tablero[1][2] == "O" && tablero[2][2] == "O")
+						|| (tablero[0][0] == "O" && tablero[0][1] == "O" && tablero[0][2] == "O")
+						|| (tablero[1][0] == "O" && tablero[1][1] == "O" && tablero[1][2] == "O")
+						|| (tablero[2][0] == "O" && tablero[2][1] == "O" && tablero[2][2] == "O")
+						|| (tablero[0][0] == "O" && tablero[1][1] == "O" && tablero[2][2] == "O")
+						|| (tablero[0][2] == "O" && tablero[1][1] == "O" && tablero[2][2] == "O")) {
+					jug1Gana++;
+					System.out.println("jug1Gana");
+					seguirJug = false;
 
+				}
+				
+				else if ((tablero[0][0] == "X" && tablero[1][0] == "X" && tablero[2][0] == "X")
+						|| (tablero[0][1] == "X" && tablero[1][1] == "X" && tablero[2][1] == "X")
+						|| (tablero[0][2] == "X" && tablero[1][2] == "X" && tablero[2][2] == "X")
+						|| (tablero[0][0] == "X" && tablero[0][1] == "X" && tablero[0][2] == "X")
+						|| (tablero[1][0] == "X" && tablero[1][1] == "X" && tablero[1][2] == "X")
+						|| (tablero[2][0] == "X" && tablero[2][1] == "X" && tablero[2][2] == "X")
+						|| (tablero[0][0] == "X" && tablero[1][1] == "X" && tablero[2][2] == "X")
+						|| (tablero[0][2] == "X" && tablero[1][1] == "X" && tablero[2][2] == "X")) {
+					jug2Gana++;
+					System.out.println("jug1Gana");
+					seguirJug = false;
+				}
+				else {
+					if(((tablero[0][0] != " " && tablero[1][0] != " " && tablero[2][0] != " ")
+							&& (tablero[0][1] != " " && tablero[1][1] != " " && tablero[2][1] != " ")
+							&& (tablero[0][2] != " " && tablero[1][2] != " " && tablero[2][2] != " "))) {
+						empate++;
+						System.out.println("empate");
+						seguirJug = false;
+					}
+				}
 			}
-			
-			else if ((tablero[0][0] == "X" && tablero[3][0] == "X" && tablero[6][0] == "X")
-					|| (tablero[1][1] == "X" && tablero[4][1] == "X" && tablero[7][1] == "X")
-					|| (tablero[2][2] == "X" && tablero[5][2] == "X" && tablero[8][2] == "X")
-					|| (tablero[0][0] == "X" && tablero[0][1] == "X" && tablero[0][2] == "X")
-					|| (tablero[1][3] == "X" && tablero[1][4] == "X" && tablero[1][5] == "X")
-					|| (tablero[6][2] == "X" && tablero[7][2] == "X" && tablero[8][2] == "X")
-					|| (tablero[0][0] == "X" && tablero[1][4] == "X" && tablero[2][8] == "X")
-					|| (tablero[2][0] == "X" && tablero[1][4] == "X" && tablero[0][2] == "X")) {
-				jug2Gana++;
-				System.out.println("jug1Gana");
-			}
-			else {
-				empate++;
-				System.out.println("empate");
-			}
+			System.out.println("¿Quieres seguir jugando? 1 --> Si, 2 --> No");
+			seguir = teclado.nextInt();
 		}
+		System.out.println("jug1Gana: "+jug1Gana);
+		System.out.println("jug2Gana: "+jug2Gana);
+		System.out.println("Empate: "+empate);
+	}
+	public static void main(String[] args) {
+		TresEnRaya juego = new TresEnRaya();
+		juego.juego();
 	}
 }
