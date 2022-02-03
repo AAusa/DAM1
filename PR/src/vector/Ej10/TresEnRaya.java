@@ -53,24 +53,37 @@ public class TresEnRaya {
 			//INICIALIZA TABLERO
 			for (int fila = 0; fila < tablero.length; fila++) {
 				for (int columna = 0; columna < tablero[fila].length; columna++) {
-					tablero[fila][columna] = " ";
+					tablero[fila][columna] = "_";
 				}
 			}
 			seguirJug = true;
 			// JUEGO
-			for (int i = 0; i < 9 && seguirJug; i++) {
-				System.out.println("Fila:");
+			for (int i = 1; i <= 9 && seguirJug; i++) {
+				System.out.println("Fila (0, 1 o 2):");
 				filaJug = teclado.nextInt();
-				System.out.println("Columna:");
+				System.out.println("Columna (0, 1 o 2):");
 				columnaJug = teclado.nextInt();
-				
-				//MUESTRA TABLERO
-				for (int fila = 0; fila < tablero.length; fila++) {
-					if (i % 2 != 0) {
+				if (i % 2 != 0) {
+					if(tablero[filaJug][columnaJug].equals("_")) {
 						tablero[filaJug][columnaJug] = "O";
-					} else {
+					}
+					else {
+						i--;
+						System.out.println("Error");
+					}
+				} 
+				else {
+					if(tablero[filaJug][columnaJug].equals("_")) {
 						tablero[filaJug][columnaJug] = "X";
 					}
+					else {
+						i--;
+						System.out.println("Error");
+					}
+				}
+				//MUESTRA TABLERO
+				for (int fila = 0; fila < tablero.length; fila++) {
+					
 					for (int columna = 0; columna < tablero.length; columna++) {
 						System.out.print(tablero[fila][columna]);
 						if(columna == 2 && columna != 5) {
@@ -106,9 +119,9 @@ public class TresEnRaya {
 					seguirJug = false;
 				}
 				else {
-					if(((tablero[0][0] != " " && tablero[1][0] != " " && tablero[2][0] != " ")
-							&& (tablero[0][1] != " " && tablero[1][1] != " " && tablero[2][1] != " ")
-							&& (tablero[0][2] != " " && tablero[1][2] != " " && tablero[2][2] != " "))) {
+					if(((tablero[0][0] != "_" && tablero[1][0] != "_" && tablero[2][0] != "_")
+							&& (tablero[0][1] != "_" && tablero[1][1] != "_" && tablero[2][1] != "_")
+							&& (tablero[0][2] != "_" && tablero[1][2] != "_" && tablero[2][2] != "_"))) {
 						empate++;
 						System.out.println("empate");
 						seguirJug = false;
