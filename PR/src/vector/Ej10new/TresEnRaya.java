@@ -46,6 +46,7 @@ public class TresEnRaya {
 	int jug1Gana = 0, jug2Gana = 0, empate = 0;
 	String[][] tablero = new String[3][3];
 	static Scanner teclado = new Scanner(System.in);
+	
 	public void inicializar() {
 		//INICIALIZA TABLERO
 		for (int fila = 0; fila < tablero.length; fila++) {
@@ -131,7 +132,7 @@ public class TresEnRaya {
 			}
 		}
 	
-	public void resultados() {
+	public void resultado() {
 		
 		System.out.println("jug1Gana: "+jug1Gana);
 		System.out.println("jug2Gana: "+jug2Gana);
@@ -146,6 +147,6 @@ public class TresEnRaya {
 			System.out.println("¿Quieres seguir jugando? 1 --> Si, 2 --> No");
 			seguir = teclado.nextInt();
 		}
-		juego.resultados();
+		juego.resultado();
 	}
 }

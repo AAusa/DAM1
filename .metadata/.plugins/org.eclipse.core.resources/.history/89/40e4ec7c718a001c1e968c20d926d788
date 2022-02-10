@@ -1,0 +1,32 @@
+package herencia.Ej2;
+
+import java.util.Scanner;
+
+public class Empleados {
+	String nombre = "";
+	String sueldo = "";
+	String puesto = "";
+	
+	public Empleados() {
+		pedirTodosDatos();
+	}
+	
+	private void pedirTodosDatos() {
+		System.out.println("Nombre empleado:");
+		Scanner teclado = new Scanner(System.in);
+		nombre = "Nombre empleado: "+teclado.nextLine();
+		System.out.println("Edad empleado:");
+		sueldo = "Sueldo empleado: "+teclado.nextLine();
+		System.out.println("Puesto empleado:");
+		puesto = teclado.nextLine();
+	}
+
+	public void visualizarTodosDatos() {
+		System.out.println("Inf. empleado:");
+		System.out.println("Nombre empleado: "+nombre);
+		System.out.println("Puesto empleado: "+puesto);
+		System.out.println("Sueldo empleado: "+sueldo);
+		System.out.println();
+	}
+	
+}

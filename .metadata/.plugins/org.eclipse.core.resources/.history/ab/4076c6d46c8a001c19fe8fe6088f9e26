@@ -1,0 +1,13 @@
+package herencia.Ej2;
+
+import herencia.Ej1.Cliente;
+import herencia.Ej1.Empleado;
+
+public class Principal {
+	public static void main(String[] args) {
+		Administrativos adm = new Administrativos();
+		Maquinistas maq = new Maquinistas();
+		adm.visualizarTodosDatos();
+		maq.visualizarTodosDatos();
+	}
+}
