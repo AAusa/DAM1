@@ -1,5 +1,5 @@
 package herencia.Ej4;
 
-public class Persona {
+public abstract class Persona {
 
 }

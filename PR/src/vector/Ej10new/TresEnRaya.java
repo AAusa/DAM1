@@ -2,76 +2,67 @@ package vector.Ej10new;
 
 import java.util.Scanner;
 
-/**
- * Clase: Ej11
- * @author alu Matriz 3x3
- * 
- *         Matriz 3x3
+/** 
+ * <h2>Juego tres en raya, en tablero de 3x3, con fichas: 'O' y 'X'</h2>
+ * @author alu
+ * @version 2.0 (con métodos)
  */
 public class TresEnRaya {
-	/**
-	 *  Metodo:
-		Instancia con espacios
-		mientras seguir = true
-			contador 9
-				Jugador: fila y columna
-				Si i % 2 != 0
-					matriz[fila][columna] = "O"
-				Sino
-					matriz[fila][columna] = "X"
-			contador que muestre todo
-			fin contador
-		saber quien gana
-			Int gana1 
-			Int gana2
-		--> Quieres jugar? 1 Si , 2 No
-		Si res = 1
-			seguir true
-		Sino 
-			seguir false
-		Fin mientras
-		
-		o _ _ 0,3,6
-		o _ _ 1,4,7
-		o _ _ 2,5,8
-		
-		o o o 0-2
-		_ _ _ 3-5
-		_ _ _ 6-8
-		
-		o _ _ 0,0) 1,4) 2,8)
-		_ o _ 2,0) 1,4) 0,2
-        _ _ o
-	 */
+	/** 
+	 * @since v.1.0
+	 */	
 	int jug1Gana = 0, jug2Gana = 0, empate = 0;
+	/** 
+	 * @since v.1.0
+	 */	
 	String[][] tablero = new String[3][3];
+	/** 
+	 * @since v.1.0
+	 */	
 	static Scanner teclado = new Scanner(System.in);
 	
-	public void inicializar() {
+	/** 
+	 * @since v.2.0
+	 */	
+	private void inicializar() {
 		//INICIALIZA TABLERO
 		for (int fila = 0; fila < tablero.length; fila++) {
 			for (int columna = 0; columna < tablero[fila].length; columna++) {
 				tablero[fila][columna] = "_";
 			}
 		}
+		System.out.println("Juego tres en raya :)");
 	}
-	public void juego() {
+	
+	/** 
+	 * @since v.1.0
+	 */	
+	
+	private void juego() {
 		boolean seguirJug = true;
 		int filaJug = 0, columnaJug = 0;
 			seguirJug = true;
-			// JUEGO
+			// ASIGNACIÓN DE POSICIÓN
 			for (int i = 1; i <= 9 && seguirJug; i++) {
-				System.out.println("Fila (0, 1 o 2):");
-				filaJug = teclado.nextInt();
-				System.out.println("Columna (0, 1 o 2):");
-				columnaJug = teclado.nextInt();
+				if(i % 2 != 0) {
+					System.out.println("Jugador 1: Elige fila (0, 1 o 2):");
+					filaJug = teclado.nextInt();
+					System.out.println("Jugador 1: Elige columna (0, 1 o 2):");
+					columnaJug = teclado.nextInt();
+				}
+				else {
+					System.out.println("Jugador 2: Elige fila (0, 1 o 2):");
+					filaJug = teclado.nextInt();
+					System.out.println("Jugador 2: Elige columna (0, 1 o 2):");
+					columnaJug = teclado.nextInt();
+				}
 				if (i % 2 != 0) {
 					if(tablero[filaJug][columnaJug].equals("_")) {
 						tablero[filaJug][columnaJug] = "O";
 					}
 					else {
 						i--;
-						System.out.println("Error");
+						System.out.println("Posición ocupada, Escoge otra:");
 					}
 				} 
 				else {
@@ -105,7 +96,7 @@ public class TresEnRaya {
 					jug1Gana++;
 					System.out.println("jug1Gana");
 					seguirJug = false;
-
+ 
 				}
 				
 				else if ((tablero[0][0] == "X" && tablero[1][0] == "X" && tablero[2][0] == "X")
@@ -132,12 +123,23 @@ public class TresEnRaya {
 			}
 		}
 	
-	public void resultado() {
+	/** 
+	 * @since v.2.0
+	 */
+	
+	private void resultado() {
 		
 		System.out.println("jug1Gana: "+jug1Gana);
 		System.out.println("jug2Gana: "+jug2Gana);
 		System.out.println("Empate: "+empate);
+		System.out.println("Fin del juego :)");
 	}
+	
+	/** 
+	 * @since v.1.0
+	 * @param main String[] args
+	 */
+	
 	public static void main(String[] args) {
 		TresEnRaya juego = new TresEnRaya();
 		int seguir = 1;
