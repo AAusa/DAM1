@@ -1,0 +1,11 @@
+package herencia.Ej2.visibilidad2;
+
+public class EmpleadoEspecial{
+	public EmpleadoEspecial() {
+		System.out.println("En empleado especial"); // 1.- Entra en empleado
+	}
+	public String nombreEs;
+	private float sueldoEs;
+	protected String direccionEs;
+	int edad;
+}

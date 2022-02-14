@@ -1,0 +1,12 @@
+package herencia.Ej3;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Empleado e = new Empleado();
+		e.LeerDatos();
+		Empleado j = new Jefe();
+		j.LeerDatos();
+	}
+
+}

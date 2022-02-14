@@ -1,0 +1,21 @@
+package herencia.Ej1;
+
+import java.util.Scanner;
+
+public class Jefe extends Empleado {
+	String titulo = "";
+	int dep = 0;
+	public Jefe() {
+		super();
+		PedirDatosJefe();	
+	}
+	private void PedirDatosJefe() {
+		System.out.println("Datos jefe:");
+		System.out.print("/n/Título: ");
+		Scanner teclado = new Scanner(System.in);
+		titulo = teclado.nextLine();
+		System.out.print("/n/Departamento: ");
+		dep = teclado.nextInt();
+	}
+}
+

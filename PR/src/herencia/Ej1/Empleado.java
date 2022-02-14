@@ -2,27 +2,25 @@ package herencia.Ej1;
 
 import java.util.Scanner;
 
-public class Empleado implements Persona {
+public class Empleado {
 	String nombre = "";
-	String edad = "";
-	String puesto = "";
-	@Override
-	public void pedirTodosDatos() {
-		System.out.println("Nombre empleado:");
+	int sueldo = 0;
+	public Empleado() {
+		PedirDatos();
+	}
+	private void PedirDatos() {
+		System.out.println("Datos empleado:");
+		System.out.print("	Nombre: ");
 		Scanner teclado = new Scanner(System.in);
-		nombre = "Nombre empleado: "+teclado.nextLine();
-		System.out.println("Edad empleado:");
-		edad = "Edad empleado: "+teclado.nextLine();
-		System.out.println("Puesto empleado:");
-		puesto = "Puesto empleado: "+teclado.nextLine();
+		nombre = teclado.nextLine();
+		System.out.print("	Sueldo: ");
+		sueldo = teclado.nextInt();
 	}
 
-	@Override
-	public void visualizarTodosDatos() {
-		System.out.println(nombreEmpresa);
-		System.out.println(nombre);
-		System.out.println(edad);
-		System.out.println(puesto);
+	public void verDatos() {
+		System.out.println("Resumen empleado:");
+		System.out.print("	Nombre: "+nombre);
+		System.out.print("	Sueldo: "+sueldo);
+		System.out.println();
 	}
-
 }

@@ -1,0 +1,9 @@
+package herencia.Ej2.visibilidad1;
+
+public class Jefe extends Empleado{
+	public Jefe() {
+		super();
+		System.out.println("En jefe");
+	}
+}
+

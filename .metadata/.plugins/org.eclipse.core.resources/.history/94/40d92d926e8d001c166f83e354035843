@@ -1,0 +1,6 @@
+package visibilidad1;
+importutilidades.EmpleadoEspecial;
+public class JefeEspecial extends EmpleadoEspecial{
+publicJefeEspecial(){
+}
+}

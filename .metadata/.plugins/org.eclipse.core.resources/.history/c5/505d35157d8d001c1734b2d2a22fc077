@@ -1,0 +1,27 @@
+package herencia.Ej3;
+
+import java.util.Scanner;
+
+public class Jefe extends Empleado {
+	String dep;
+	int incSueldo;
+	public Jefe() {
+		RellenarDatosJefe();
+		LeerDatosJefe();
+	}
+	
+	public void RellenarDatosJefe() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.print("Dep: ");
+		dep = teclado.nextLine();
+		incSueldo = 250;
+		sueldoBase = 1000;
+	}
+	
+	public void LeerDatosJefe() {
+		System.out.println("Nombre jefe: "+nombre);
+		System.out.println("Edad jefe: "+edad);
+		System.out.println("incSueldo jefe: "+incSueldo);
+		System.out.println("sueldoBase jefe: "+sueldoBase);
+	}
+}

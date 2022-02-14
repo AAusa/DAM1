@@ -1,0 +1,45 @@
+package herencia.Ej3;
+
+import java.util.Scanner;
+
+public class Empleado {
+/**
+ * RellenarDatos(e Empleado)
+	si e = obj Jefe
+		nombre = teclado
+		edad = teclado
+		incSueldo = 250
+		sueldoBase = 1000
+	sino
+		nombre = teclado
+		edad = teclado
+		incSueldo = 0
+		sueldoBase = 1000
+ */
+	static String nombreEmpresa = "Electrica S.L";
+	public String nombre;
+	public int edad;
+	public int sueldoBase;
+
+	public void RellenarDatos() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.print("Nombre: ");
+		nombre = teclado.nextLine();
+		System.out.print("Edad: ");
+		edad = teclado.nextInt();
+		incSueldo = 0;
+		sueldoBase = 1000;
+	}
+	
+	public void LeerDatos() {
+		System.out.println("Nombre empleado: "+nombre);
+		System.out.println("Edad empleado: "+edad);
+		System.out.println("incSueldo empleado: "+incSueldo);
+		System.out.println("sueldoBase empleado: "+sueldoBase);
+	}
+
+	public Empleado() {
+		RellenarDatos();
+		LeerDatos();
+	}
+}

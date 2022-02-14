@@ -110,6 +110,7 @@
 		<item key="source" value="16"/>
 		<item key="antpath" value="C:\Users\alu\eclipseWorkspace\programacion\PR\javadoc.xml"/>
 		<item key="destdir" value="C:\Users\alu\eclipseWorkspace\programacion\PR\doc"/>
+		<item key="doctitle" value="index7"/>
 		<section name="projects">
 			<section name="PR">
 				<item key="href" value=""/>
@@ -120,6 +121,41 @@
 				<item key="href" value=""/>
 				<item key="destdir" value="C:\Users\alu\eclipseWorkspace\programacion\entornos\doc"/>
 				<item key="antpath" value="C:\Users\alu\eclipseWorkspace\programacion\entornos\javadoc.xml"/>
+			</section>
+			<section name="Ejemplo1">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo1\doc"/>
+				<item key="antpath" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo1\javadoc.xml"/>
+			</section>
+			<section name="Ejemplo2">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo2\doc"/>
+				<item key="antpath" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo2\javadoc.xml"/>
+			</section>
+			<section name="Ejemplo3">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo3\doc"/>
+				<item key="antpath" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo3\javadoc.xml"/>
+			</section>
+			<section name="Ejemplo4">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo4\doc"/>
+				<item key="antpath" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo4\javadoc.xml"/>
+			</section>
+			<section name="Ejemplo5">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo5\doc"/>
+				<item key="antpath" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo5\javadoc.xml"/>
+			</section>
+			<section name="Ejemplo6">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo6\doc"/>
+				<item key="antpath" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo6\javadoc.xml"/>
+			</section>
+			<section name="Ejemplo7">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo7\doc"/>
+				<item key="antpath" value="C:\Users\alu\git\Herencia_y_Polimorfismo\Ejemplo7\javadoc.xml"/>
 			</section>
 		</section>
 	</section>

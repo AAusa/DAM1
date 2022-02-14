@@ -1,0 +1,20 @@
+package herencia.Ej3;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Empleado e = new Empleado();
+		e.LeerDatos();
+		Empleado j = new Jefe();
+		j.LeerDatos();
+		System.out.println("MENU:");
+		System.out.println("	1. Mod. sueldo base empleado");
+		System.out.println("	2. Mod. plus jefes");
+		System.out.println("	3. Ver datos empleados");
+		System.out.println("	4. Salir");
+		System.out.print("OPCIÓN: ");
+
+
+	}
+
+}

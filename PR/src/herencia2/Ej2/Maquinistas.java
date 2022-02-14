@@ -1,0 +1,30 @@
+package herencia2.Ej2;
+
+import java.util.Scanner;
+
+public class Maquinistas extends Empleados {
+	int añosMaquina = 0;
+	int numMaquina = 0;
+	public Maquinistas() {
+		super();
+		System.out.println("Inf. maquinistas:");
+		pedirTodosDatos();
+	}
+	
+	private void pedirTodosDatos() {
+		System.out.println("añosMaquina:");
+		Scanner teclado = new Scanner(System.in);
+		añosMaquina = teclado.nextInt();
+		System.out.println("Nº maquina: ");
+		numMaquina = teclado.nextInt();
+	}
+
+	public void visualizarTodosDatos() {
+		super.visualizarTodosDatos();
+		System.out.println("Inf. maquinista:");
+		System.out.println("añosMaquina: "+añosMaquina);
+		System.out.println("Nº maquina: "+numMaquina);
+		System.out.println();
+
+	}
+}
