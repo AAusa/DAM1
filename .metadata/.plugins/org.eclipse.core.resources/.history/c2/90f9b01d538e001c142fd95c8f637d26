@@ -1,0 +1,5 @@
+package herencia.Ej6;
+// 6. Clase final no se puede heredar
+public class Jefe {
+
+}

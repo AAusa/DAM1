@@ -1,0 +1,14 @@
+package herencia.Ej7;
+
+public class ImplementaAbstracta extends ClaseAbstracta {
+	int datoNum;
+	String datoString;
+	@Override
+	public int ejemplo() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	public ImplementaAbstracta() {
+		System.out.println("ImplementaAbstracta");
+	}
+}

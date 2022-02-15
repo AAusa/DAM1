@@ -1,0 +1,7 @@
+package herencia.Ej7;
+
+public interface Interfaz {
+	public int prueba = 0;
+	static int prueba2 = 0;
+	final int prueba3 = 0;
+}

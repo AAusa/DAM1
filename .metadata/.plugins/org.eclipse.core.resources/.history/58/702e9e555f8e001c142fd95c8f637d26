@@ -1,0 +1,15 @@
+package herencia.Ej7;
+
+public abstract class ClaseAbstracta {
+	
+	public int prueba;
+	int prueba2;
+	private int prueba3;
+	protected int prueba4;
+	//Deja: public, protected 
+	public abstract int ejemplo();
+	//Deja: public, protected, private
+	private void ejemplo2() {
+		
+	}
+}

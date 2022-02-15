@@ -1,0 +1,6 @@
+package herencia.Ej7;
+
+public class ImplementaInterfaz implements Interfaz {
+	int datoNumInt;
+	String datoStringInt;
+}
