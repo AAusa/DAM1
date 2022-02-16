@@ -16,8 +16,13 @@ public class ImplementaAbstracta extends ClaseAbstracta {
 		abs = new ImplementaAbstracta();
 		
 	}
-	// error cambio public - package
+	// error cambio public - package	
+	/*
 	package int ejemplo3() {
-		
+	} */
+	@Override
+	public int ejemplo3() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
