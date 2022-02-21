@@ -11,6 +11,10 @@ public class Division {
 		dividendo = teclado.nextInt();
 		System.out.print("Divisor: ");
 		divisor = teclado.nextInt();
+		if(divisor == 0) {
+			throw new ArithmeticException("ERROR. Div por 0"); 
+		}
+		
 	}
 	int CalcDiv() {
 		int cociente = dividendo / divisor;
@@ -21,7 +25,7 @@ public class Division {
 			PideNum();
 			System.out.print("El resultado de la división es: "+ CalcDiv());
 		} catch(ArithmeticException e) {
-			System.out.println("Div x 0");
+			System.out.println(e.getMessage());
 		} catch(InputMismatchException e) {
 			System.out.println("No INT");
 		}

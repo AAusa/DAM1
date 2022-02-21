@@ -30,16 +30,35 @@ public class num_cadena {
 		return numTotal;
 	}
 	
+	String pideCadena() {
+		String caracter;
+		String cadenaTotal = "";
+		for(int i = 0; i < 6; i++) {
+			System.out.print("Caracter: ");
+			Scanner teclado = new Scanner(System.in);
+			caracter = teclado.nextLine();
+			if(caracter.charAt(0) >= '0' && caracter.charAt(0) <= '9') {
+				throw new InputMismatchException("ERROR.- Introduce num");
+			}
+			else {
+				cadenaTotal += caracter;
+			}
+		}
+		return cadenaTotal;
+	}
+	
 	void EjecutarMetodos() {
+		
 		try {
-			//pideCadena();
 			System.out.println("La suma es: "+pideNum());
 		} catch(InputMismatchException e1) {
 			System.out.println("ERROR.- No int");
-		} /*catch(NoSuchElementException e) {
-			System.out.println("ERROR.- Cadena vacía");
-		}*/
-		
+		}
+		try {
+			System.out.println("La de caracteres es: "+pideCadena());
+		} catch(InputMismatchException e1) {
+			System.out.println(e1.getMessage());
+		}
 	}
 	public num_cadena() {
 		EjecutarMetodos();

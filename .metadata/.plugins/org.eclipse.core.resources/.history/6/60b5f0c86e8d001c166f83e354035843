@@ -1,9 +1,0 @@
-package herencia.Ej2.visibilidad1;
-
-import herencia.Ej2.visibilidad2.EmpleadoEspecial;
-
-importutilidades.EmpleadoEspecial;
-public class JefeEspecial extends EmpleadoEspecial{
-publicJefeEspecial(){
-}
-}

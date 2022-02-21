@@ -1,7 +1,0 @@
-package herencia.Ej3;
-
-public class Jefe extends Empleado {
-	public Jefe() {
-		super();
-	}
-}
