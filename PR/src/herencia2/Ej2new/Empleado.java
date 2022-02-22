@@ -1,7 +1,28 @@
 package herencia2.Ej2new;
 
-public class Empleado {
+import java.util.Scanner;
 
+public class Empleado {
+	String nombre;
+	int sueldoB;
+	int edad;
+	public Empleado() {
+		Scanner teclado = new Scanner(System.in);
+		System.out.print("Nombre: ");
+		nombre = teclado.nextLine();
+		System.out.print("sueldoB: ");
+		sueldoB = teclado.nextInt();
+		System.out.print("Edad: ");
+		edad = teclado.nextInt();	
+		System.out.println();
+	}
+	
+	void visualizarTodosLosDatos() {
+		System.out.println();
+		System.out.print("Nombre: "+nombre+" ");
+		System.out.print("sueldoB: "+sueldoB+" ");
+		System.out.print("Edad: "+edad+" ");
+	}
 }
 
 /*
@@ -43,3 +64,5 @@ public class Empleado {
 		emp[i] instanceof Maquinistas
 			visualiza
  */
+
+
