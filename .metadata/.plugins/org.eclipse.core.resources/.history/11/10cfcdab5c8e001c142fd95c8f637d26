@@ -1,9 +1,0 @@
-package herencia.Ej6;
-// 1. Clase final no se puede heredar
-public class Jefe extends Empleado {
-	// 2. Metodo final no se puede heredar
-	voidpedirDatos();
-	void voidpedirDatos() {
-		
-	}
-}

@@ -1,8 +1,0 @@
-package herencia.Ej7;
-
-public abstract class ClaseAbstracta {
-	public int prueba;
-	int prueba2;
-	private int prueba3;
-	package int prueba3;
-}

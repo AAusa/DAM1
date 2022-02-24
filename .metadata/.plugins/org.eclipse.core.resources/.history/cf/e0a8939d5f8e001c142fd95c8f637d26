@@ -1,6 +1,0 @@
-package herencia.Ej7;
-
-public class ImplementaAbstracta extends ClaseAbstracta {
-	int datoNum;
-	String datoString;
-}
