@@ -1,20 +1,16 @@
 public class Automovil extends Vehiculo {
-
-	public int getEjes() {
-		return ejes;
+	
+	public void pintar(int nuevoColor) {
+		color = nuevoColor;
+		precioPintura = 600;
 	}
-
-	public boolean debeRevisarse() {
-		boolean revisar = false;
-		if(km > 15000 || dias > 360) {
-			revisar = true;
+	
+	public boolean debeRevisarse(int km, int dias) {
+		if(km >= 15000 && dias >= 360) {
+			return true;
 		}
 		else {
-			revisar = false;
+			return false;
 		}
-		return revisar;
 	}
-
-
-	
 }

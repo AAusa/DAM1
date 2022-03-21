@@ -1,25 +1,25 @@
-public class Furgoneta extends Vehiculo  {
-	
-	public final int ejesf;
-	
+
+public class Furgoneta extends Vehiculo {
+	int ejes;
 	public Furgoneta(int ejes) {
-		ejesf=ejes;
-		precioPintar=500+100*ejes;
+		this.ejes = ejes;
 	}
-
+	
 	public int getEjes() {
-		return ejesf;
+		return ejes;
 	}
-
-	public boolean debeRevisarse() {
-		boolean revisar = false;
-		if(km > 12000 || dias > 180) {
-			revisar =  true;
+	
+	public void pintar(int nuevoColor) {
+		color = nuevoColor;
+		precioPintura = 500 + 100 * ejes;
+	}
+	
+	public boolean debeRevisarse(int km, int dias) {
+		if(km >= 12000 && dias >= 180) {
+			return true;
 		}
 		else {
-			revisar = false;
+			return false;
 		}
-		return revisar;
 	}
-
 }
