@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class Prueba {
 
@@ -107,6 +108,7 @@ public class Prueba {
 				}
 			}
 		}*/
+		/*
 		int elMenor = 0;
 		boolean ordenadoTodo = false;
 		int i = 0;
@@ -162,5 +164,158 @@ public class Prueba {
 			System.out.println(lista[x]);
 		}
 	
-}
+	}
+		//De un lado a otro:
+		int u = cantidad - 1;
+		int p = 0, elMenor = 0;
+		boolean ordenado1 = false;
+		int [] valores = {9,5,3,1};
+		int i = 0;
+				do {
+					while(ordenado1) {
+						ordenado1 = true;
+						for(int j = u; j <= p; j--) {
+ 							if(lista[j] < lista[j+i]) {
+ 								lista[j+i] = elMenor;
+ 								lista[j+i] = lista[j];
+ 								lista[j+i] = elMenor;
+ 								ordenado1 = false;
+							}			
+						}
+						p++;
+					}
+					i++;
+						
+				}
+				while (p < u && ordenado1);
+				for(int x = 0; x < cantidad; x++) {
+					System.out.println(lista[x]);
+				}
+		
+		int desplazamiento = 0; 
+		boolean ordenado = false;
+		k = valores[0];
+		int [] valores = {9,5,3,1};
+		
+		do {
+			ordenado = true;
+			
+			for(int i = 0; i < cantidad -1 -k; i++) {
+				if(lista[i] < lista[i+k]) {
+					swap(i,i+k);
+					ordenado = false;
+				}
+				if(ordenado && desplazamiento < valores.length) {
+					k = valores[desplazamiento];
+					desplazamiento++;
+					ordenado = false;
+				}
+			}
+		}
+		while(!ordenado);
+		
+		
+		int [] h = {9,5,3,1};
+		//vector de valores con los que comprobar:
+		for(int k = 0; k < h.length; k++) {
+			int m = h[k];
+			for(int i = 0; i < cantidad - m; i++) {
+				int j = i;
+				int aux = lista[j+m];
+				while(j >= 0 && lista[i] > lista[j+m]) {
+					// intercambio:
+					lista [j+m] = lista [j];
+					// para que haga el intercambio 
+					//el numero de veces como j-m se necesite
+					j = j - m;
+				}
+				// se pone el numero a analizar en la posicion que debe estar
+				lista [j+m] = aux;
+		
+		for (int i = 1; i < cantidad; i++) {
+			int aux = lista[0];
+			int j = i - 1;
+			// Entre los ordenados, se busca la posición en la que debe estar:
+			while (j >= 0 && lista[j] > aux) {
+				//Cambia el menor por la posición del mayor (lo hace tantas veces como en la parte ordenada se tenga que correr lista[i] hasta que esté ordenado):
+				lista [j + 1] = lista [j];
+				//Lo  mismo que: lista [i] = lista [j];
+				j --;
+			}
+		aux = lista [j];
+		}
+		
+		
+		for(int x = 0; x < cantidad; x++) {
+			System.out.println(lista[x]);
+		}
+		
+		int k;
+		for(int i = ini; i <= fin; i++) {
+			if(lista[k] > lista[i]) {
+				j = i - 1;
+				int aux = lista[i];
+				while(j > k && lista[j] > aux) {
+					lista[j+1] = lista[j];
+					j--;
+				}
+				lista[k] = aux;
+				k = i;
+			}
+		}
+		
+		int [] h = {9,5,3,1};
+		//vector de valores con los que comprobar:
+		int ini = 0;
+		int fin = h.length;
+		int j;
+		for(int i = ini; i <= fin; i++) {
+			if(lista[k] > lista[i]) {
+				j = i - 1;
+				int aux = lista[i];
+				while(j > k && lista[j] > aux) {
+					lista[j+1] = lista[j];
+					j--;
+				}
+				lista[k] = aux;
+				k = i;
+			}
+		}
+		//pivotaje:
+		if(ini >= fin) {
+			return;
+		}
+		int ini, fin; 
+		int aux = lista[ini];
+		int i = ini, j = fin;
+		do {
+			while(lista[i] < aux) i++;
+			while(lista[i] > aux) j--;
+			swap(i,j);
+		}
+		while(i < j);
+		//ordenar ambas partes:
+		qsort(ini, i-1);
+		qsort(j+1, fin);*/
+		
+		final int TAM = 100_000;
+		Random r = new Random();
+		int [] vector = new int[TAM];
+		for(int i = 0; i < TAM; i++) {
+			vector[i] = (int)(Math.random()*MAX)+1;
+			vector[i] = r.nextInt()MAX+1;
+		}
+		
+		long t, tiempo;
+		int pruebas;
+		for(int i = 0; i < pruebas; i++) {
+			t = System.currentTimeMillis();
+			k.ordenar();
+			t += System.currentTimeMillis();
+			
+		}
+		tiempo /= pruebas;
+		
+	}
+	
 }
