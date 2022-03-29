@@ -4,7 +4,8 @@ public class Principal {
 	public static void main(String[]args) {
 		Random r = new Random();
 		Pila p = new Pila();
-		for(int i = 0; i < ((int)(Math.random()*p.MAXSIZE)+1); i++) {
+		int cantidadElementos = (int)(Math.random()*p.MAXSIZE)+1;
+		for(int i = 0; i < cantidadElementos; i++) {
 			try {
 				p.push((int)(Math.random()*10+1));
 			} catch (PilaDesbordeException e) {
@@ -13,7 +14,7 @@ public class Principal {
 			}
 		}
 		
-		for(int i = 0; i < ((int)(Math.random()*p.MAXSIZE)+1); i++) {
+		for(int i = 0; i < cantidadElementos; i++) {
 			try {
 				p.pop();
 			} catch (PilaVaciaException e) {

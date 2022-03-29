@@ -30,7 +30,7 @@ public class Pila {
 	}
 	
 	public int verElementos() throws PilaVaciaException {
-		for(int i = cantidadElementos; i > 0; i++) {
+		for(int i = cantidadElementos; i > 0; i--) {
 			if(cantidadElementos == 0) {
 				throw new PilaVaciaException("Pila vacia");
 			}
