@@ -29,15 +29,14 @@ public class Pila {
 		return cantidadElementos;
 	}
 	
-	public int verElementos() throws PilaVaciaException {
-		for(int i = cantidadElementos; i > 0; i--) {
+	public void verElementos() throws PilaVaciaException {
+		for(int i = cantidadElementos-1; i >= 0; i--) {
 			if(cantidadElementos == 0) {
 				throw new PilaVaciaException("Pila vacia");
 			}
 			else {
-				return datos[cantidadElementos--];
+				System.out.println("Posición "+i+", contenido: "+datos[cantidadElementos--]);
 			}
 		}
-		return datos[cantidadElementos--];	
 	}
 }
