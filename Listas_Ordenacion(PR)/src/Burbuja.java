@@ -1,26 +1,34 @@
+public class Burbuja extends ListaOrdenable{
 
-public class Burbuja extends ListaOrdenable {
-
-	public Burbuja(int[] x) {
-		super(x);
+	public Burbuja(int[] m) {
+		super(m);
+		
 	}
-
-	@Override
 	public void ordenar() {
-		int elMenor = 0;
-		boolean ordenado = false;
-		for(int i = 0; i < cantidad - 1; i ++) {
-			for(int j = cantidad - 1; j <= i; i++) {
-				if(m[j+1] < m[j]) {
-					ordenado = false;
-					m[j+1] = elMenor;
-					m[j+1] = m[j];
-					m[j] = elMenor;
+		int x=0;
+		int cantidad = m.length;
+		boolean ordenado=false;
+		for(int i=0; i<cantidad-1;i++){
+			ordenado=true;
+			for(int j=i; j<cantidad-(i+1);j++){
+				if(m[j]>m[j+1]) { 
+					x=m[j];
+					m[j]=m[j+1];	
+					m[j+1]=x;
+					ordenado=false;
 				}
-			// if (ordenado)
-			// return;
 			}
-		}	
+			for(int j=cantidad-(i+1);j>i;j--) {
+				if(m[j-1]>m[j]) { 
+					x=m[j];
+					m[j]=m[j-1];	
+					m[j-1]=x;
+					ordenado=false;
+				}
+			}
+			if(ordenado==true)break;
+		}
+		
 	}
 
 }

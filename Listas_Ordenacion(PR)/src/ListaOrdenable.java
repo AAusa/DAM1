@@ -1,22 +1,21 @@
-// m es una copia de l que es ordenada. l es m sin ordenar.
 public abstract class ListaOrdenable extends Lista {
+	int[]m;
+	public ListaOrdenable(int[]m) {
+		this.m=m.clone();
+			l=m.clone();
+	}
 	public abstract void ordenar();
-	int [] m;
-	Lista k = new Lista();
 	public long tiempo() {
-		long t, tiempo = 0;
-		int pruebas = 10;
-		m = m.clone();
-		for(int i = 0; i < pruebas; i++) {
-			t = System.currentTimeMillis();
-			m = m.clone();
-			ordenar();
-			tiempo += System.currentTimeMillis() - t;
-			
-		}
-		return tiempo /= pruebas;
+		 long tiempo = 0;
+		 long t;
+		 for(int i = 0; i<5;++i) {
+		 t=System.currentTimeMillis(); 
+		 m=l.clone();
+		 ordenar();
+		 tiempo+=(System.currentTimeMillis()-t);
+		 }
+		 tiempo/=5;
+		return tiempo;
 	}
-	public ListaOrdenable(int [] x) {
-		m = x;
-	}
+	
 }
