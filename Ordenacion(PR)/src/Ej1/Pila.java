@@ -1,3 +1,5 @@
+package Ej1;
+
 public class Pila {
 	final int MAXSIZE = 100;
 	int [] datos;
