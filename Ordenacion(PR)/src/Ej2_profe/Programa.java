@@ -1,22 +1,38 @@
 package Ej2_profe;
 
 import java.util.Random;
-
+/* 
+ * El resultado sale con los numeros de votos en vez de los escaños que se obtienen
+ */
 public class Programa {
 
 	public static void main(String[] args) {
-		Random r = new Random();
-		Votacion v = new Votacion(5);
-		int electores = 724983;
-		int partidos = 20;
 		final int MAXVOTOS = 500;
-		int numVotos = r.nextInt();
-		electores -= numVotos;
-		int[] votos = {1000, 25000, 12000, 30000};
-		String[] p = {"P1", "P2", "P3", "P4"};
+		final int PARTIDOS = 20;
+		final int ELECTORES = 724983;
+		final int ESCAÑOS = 27;
 		
-		for(int i = 0; i < p.length; i++) {
-			v.insertarVotos(p[i], votos[i]);
+		Random r = new Random();
+		Votacion v = new Votacion(ESCAÑOS);
+		
+		int numVotos;
+		int electores = ELECTORES;
+		int[] votos = {1000, 25000, 12000, 30000};
+		String[] p = new String[PARTIDOS];
+		
+		// rellenar datos de cada partido:
+		for(int i = 1; i <= PARTIDOS; i++) {
+			p[i-1] = "P_" + (i < 10 ? 0 : "") + i; 
+		}
+		
+		while (electores > 0) {
+			numVotos = r.nextInt(MAXVOTOS);
+			//El hecho de que se sume dos es que los que se desborda de PARTIDOS corresponden a nulos
+			int auxPartido = r.nextInt(PARTIDOS + 2);
+			if (auxPartido < PARTIDOS) {
+				v.insertarVotos(p[auxPartido], numVotos);
+			}
+			electores -= numVotos;	
 		}
 		v.calcular();
 		System.out.println(v.toString());

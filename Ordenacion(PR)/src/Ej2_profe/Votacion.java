@@ -72,7 +72,7 @@ public class Votacion {
 		}
 		String salida = "Partido\tVotos";
 		for (int i = 0; i < diputados; i++) {
-			salida += "\n"+l[i].getNombre()+"\t"+l[i].getVotos();
+			salida += "\n"+e[i].getNombre()+"\t"+e[i].getVotos();
 		}
 		return salida;
 	}
