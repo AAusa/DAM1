@@ -3,7 +3,7 @@ import java.util.Arrays;
 /* Ejemplo Clase e Interface Comparable aprenderaprogramar.com */
 
 public class Programa {
-    public static void main(String arg[]) {      
+    public static void main(String[] args) {      
         
         Persona p1 = new Persona(74999999,35);
         Persona p2 = new Persona(72759474,30);  
