@@ -38,4 +38,7 @@ public int compareTo(Object o) {
 	else 
 		return 1;*/
 }
+public boolean equals(Object o) {
+	return nombre.equals(o);
+}
 }
