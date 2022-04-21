@@ -1,7 +1,6 @@
 package ej9;
 
 import java.util.Random;
-import jdk.shell.spi.ExecutionControl.*;
 
 public class Domino {
 	Ficha[] domino = new Ficha[28];
@@ -27,8 +26,9 @@ public class Domino {
 		return domino;
 	}
 	
-	public Ficha[] getJuego(int cantidad) throws NotImplementedException {
-		throw new NotImplementedException("No implementado");
+	public Ficha[] getJuego(int cantidad) throws Exception {
+		//NotImplementedException era la que tocaba
+		throw new Exception("No implementado");
 	}
 	/*
 	 * Devuelve la ficha del domino solicitada, 

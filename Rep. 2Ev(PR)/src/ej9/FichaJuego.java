@@ -17,4 +17,14 @@ public class FichaJuego extends Ficha {
 		return c1 == f.c1 || c2 == f.c2
 			|| c2 == f.c1 || c1 == f.c2;
 	}
+	
+	public void casar (FichaJuego f) {
+		if (! compatible(f)) {
+			throw new IllegalArgumentException();
+		}
+		if (c1 == f.c1 && !ocupado1 && f.ocupado2) {
+			ocupado1 = true;
+			f.ocupado1 = true;
+		}
+	}
 }
