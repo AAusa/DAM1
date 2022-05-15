@@ -1,2 +1,0 @@
-a	1	NoCobrada	a.
-a	1	NoCobrada	a.
