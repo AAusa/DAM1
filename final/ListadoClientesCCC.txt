@@ -1,0 +1,2 @@
+nombre=a, apellidos=a, DNI=a a
+Num cuentas: 1
